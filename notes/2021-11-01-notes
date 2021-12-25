@@ -1,0 +1,449 @@
+scala>   def f(x: Int) = x + 1
+f: (x: Int)Int
+
+scala> println(1)
+1
+
+scala> println(1)
+1
+
+scala> 3.5: Float
+<console>:12: error: type mismatch;
+ found   : Double(3.5)
+ required: Float
+       3.5: Float
+       ^
+
+scala> 3.5: Double
+res3: Double = 3.5
+
+scala> 1234.0
+res4: Double = 1234.0
+
+scala> 12.34
+res5: Double = 12.34
+
+scala> true || false
+res6: Boolean = true
+
+scala>
+
+scala> true
+res7: Boolean = true
+
+scala> false
+res8: Boolean = false
+
+scala> true || true
+res9: Boolean = true
+
+scala> true || false
+res10: Boolean = true
+
+scala> false || true
+res11: Boolean = true
+
+scala> false || false
+res12: Boolean = false
+
+scala> val t = true
+t: Boolean = true
+
+scala> val f = false
+f: Boolean = false
+
+scala> t && t
+res13: Boolean = true
+
+scala> f && t
+res14: Boolean = false
+
+scala> t && f
+res15: Boolean = false
+
+scala> f && f
+res16: Boolean = false
+
+scala> List(3, 0, -9)
+res17: List[Int] = List(3, 0, -9)
+
+scala> true
+res18: Boolean = true
+
+scala> List[Boolean](true, true, false)
+res19: List[Boolean] = List(true, true, false)
+
+scala> 3, 9
+<console>:1: error: ';' expected but ',' found.
+       3, 9
+        ^
+
+scala> List()
+res20: List[Nothing] = List()
+
+scala> List().length
+res21: Int = 0
+
+scala> List()
+res22: List[Nothing] = List()
+
+scala> 'x'.toChar
+res23: Char = x
+
+scala> 'x'.toInt
+res24: Int = 120
+
+scala> '0'.toInt
+res25: Int = 48
+
+scala> '😀'.toInt
+<console>:1: error: unclosed character literal (or use " not ' for string literal)
+       '😀'.toInt
+       ^
+<console>:1: error: illegal character '\ude00'
+       '😀'.toInt
+         ^
+<console>:1: error: unclosed character literal (or use " not ' for string literal)
+       '😀'.toInt
+          ^
+
+scala> '1
+res26: Int = 1
+
+scala> 1
+res27: Int = 1
+
+scala> 'a'.toInt
+res28: Int = 97
+
+scala> 'b'.toInt
+res29: Int = 98
+
+scala> 'c'.toInt
+res30: Int = 99
+
+scala> 65.toChar
+res31: Char = A
+
+scala> 065.toChar
+<console>:1: error: Decimal integer literals may not have a leading zero. (Octal syntax is obsolete.)
+       065.toChar
+       ^
+
+scala> "132xraitis \n"
+res32: String =
+"132xraitis
+"
+
+scala> "132xraitis lelde"
+res33: String = 132xraitis lelde
+
+scala> ""
+res34: String = ""
+
+scala> "1"
+res35: String = 1
+
+scala> "1nm,"
+res36: String = 1nm,
+
+scala> 3 * 5
+res37: Int = 15
+
+scala>   def f(x: Int) = x + 1
+f: (x: Int)Int
+
+scala> def f(x: Int, y: Int) = x * y
+f: (x: Int, y: Int)Int
+
+scala> f(3, 5)
+res38: Int = 15
+
+scala> *(3, 5)
+<console>:12: error: not found: value *
+       *(3, 5)
+       ^
+
+scala> 3 - 5
+res40: Int = -2
+
+scala> ((3 - 5) * 2) + 1
+res41: Int = -3
+
+scala> 3.14.floor
+res42: Double = 3.0
+
+scala> 3.14.floor
+res43: Double = 3.0
+
+scala> res43
+res44: Double = 3.0
+
+scala> println(1)
+1
+
+scala> println(1, 2)
+(1,2)
+
+scala> println(1, 2, 3)
+(1,2,3)
+
+scala> println(1, 2, 3)
+(1,2,3)
+
+scala>   def g(x: Int, y: Int) = x + y
+g: (x: Int, y: Int)Int
+
+scala> g(3, 4)
+res49: Int = 7
+
+scala> 3.14 * 8.7
+res50: Double = 27.317999999999998
+
+scala> List(3, 4) ++ List(5)
+res51: List[Int] = List(3, 4, 5)
+
+scala> List(5) ++ List(3, 4)
+res52: List[Int] = List(5, 3, 4)
+
+scala>
+
+scala> (List(5) ++ List(3, 4)).reverse
+res53: List[Int] = List(4, 3, 5)
+
+scala> (List(5) ++ List(3, 4)).intersperse
+<console>:12: error: value intersperse is not a member of List[Int]
+       (List(5) ++ List(3, 4)).intersperse
+                               ^
+
+scala> (List(5) ++ List(3, 4)).intercalate
+<console>:12: error: value intercalate is not a member of List[Int]
+       (List(5) ++ List(3, 4)).intercalate
+                               ^
+
+scala> "raitis".reverse
+res56: String = sitiar
+
+scala> "lelde".reverse
+res57: String = edlel
+
+scala> "lelde RAITIS"
+
+scala> "lelde RAITIS"
+res58: String = lelde RAITIS
+
+scala> "lelde RAITIS".to
+to        toBoolean   toByte        toDouble   toIndexedSeq   toIterable   toList   toLowerCase   toSeq   toShort    toString        toUpperCase
+toArray   toBuffer    toCharArray   toFloat    toInt          toIterator   toLong   toMap         toSet   toStream   toTraversable   toVector
+
+scala> "lelde RAITIS".toUpperCase
+res59: String = LELDE RAITIS
+
+scala> "lelde RAITIS".toLowerCase
+res60: String = lelde raitis
+
+scala> // uppercase(str)
+
+scala> 3 * 3
+res61: Int = 9
+
+scala> (3 * 3) + 1
+res62: Int = 10
+
+scala> print(3)
+3
+scala> print(3); print(3)
+33
+scala> println(3); println(3)
+3
+3
+
+scala> print(3); println(3)
+33
+
+scala> println(3)
+3
+
+scala> print(3)
+3
+scala> print(3); print(3); print(3); print(3); print(3); print(3); print(3)
+3333333
+scala> println(3); println(3); println(3); println(3); println(3); println(3); println(3)
+3
+3
+3
+3
+3
+3
+3
+
+scala> print(3); println(3); println(3); println(3); println(3); println(3); println(3)
+33
+3
+3
+3
+3
+3
+
+scala> "test"
+res72: String = test
+
+scala> println(3)
+3
+
+scala> println(3 + 3)
+6
+
+scala> println((4))
+4
+
+scala> println(3)
+3
+
+scala> println(3 + 3)
+6
+
+scala> println(3 + 9 + 3)
+15
+
+scala> println(3 + (9 * 9) + 3)
+87
+
+scala> println(3 + (9 * ((9))) + 3)
+87
+
+scala> println(3 + (9 * ((9 + 1))) + 3)
+96
+
+scala>   def f(x: Int) = x + 1
+f: (x: Int)Int
+
+scala> f(1)
+res82: Int = 2
+
+scala> def kaķītis: Int = 1
+kaķītis: Int
+
+scala> kaķītis
+res83: Int = 1
+
+scala> def kaķītis: Int = { print(1); 2 }
+kaķītis: Int
+
+scala> kaķītis
+1res84: Int = 2
+
+scala> if (3 > 4) 1 else 0
+res85: Int = 0
+
+scala> val d = "derīgi"
+d: String = derīgi
+
+scala> val n = "nederīgi"
+n: String = nederīgi
+
+scala> if ("a".length >= 3) d else n
+res86: String = nederīgi
+
+scala> if ("ahh".length >= 3) d else n
+res87: String = derīgi
+
+scala> if(true)"paņem jaku"else"neņem jaku"
+res88: String = paņem jaku
+
+scala> if (true) "paņem jaku" else "neņem jaku"
+res89: String = paņem jaku
+
+scala> if (true) 1 else 0
+res90: Int = 1
+
+scala> 1
+res91: Int = 1
+
+scala> 4 > 3
+res92: Boolean = true
+
+scala>   def apr(x: Int): Bool = x > 5
+<console>:11: error: not found: type Bool
+         def apr(x: Int): Bool = x > 5
+                          ^
+
+scala>   def apr(x: Int): Boolean = x > 5
+apr: (x: Int)Boolean
+
+scala> apr(3)
+res93: Boolean = false
+
+scala> def apr(auksts: Boolean): String = if (auksts) "paņem jaku" else "neņem jaku"
+apr: (auksts: Boolean)String
+
+scala> apr(true)
+res94: String = paņem jaku
+
+scala> if (true) 1 else 0
+res95: Int = 1
+
+scala> if (true) 1 else 0
+
+scala> if (true) 1 else 0
+res96: Int = 1
+
+scala> if (false) 1 else 0
+res97: Int = 0
+
+scala> if ("123".length == 3) "derīgs trīsciparu skaitlis" else "nederīgs 3-ciparu skaitlis"
+res98: String = derīgs trīsciparu skaitlis
+
+scala> "123".length
+res99: Int = 3
+
+scala> 3 == 3
+res100: Boolean = true
+
+scala>
+Display all 504 possibilities? (y or n)
+
+scala> "123".length == 3
+res101: Boolean = true
+
+scala> def apr(s: String) = if (s.length == 3) "derīgs 3-simbolu teksts" else "nederīgs 3-simbolu teksts"
+apr: (s: String)String
+
+scala> def f(x: Int): Int = x + (x * x)
+f: (x: Int)Int
+
+scala> // f(3) = x + (x * x) = 3 + (3 * 3)
+
+scala> f(3)
+res102: Int = 12
+
+scala> // if (3 > 4) 0 else 1
+
+scala> // if (false) 0 else 1
+
+scala> if (false) 0 else 1
+res103: Int = 1
+
+scala> if (false) 1243 else 23452354
+res104: Int = 23452354
+
+scala> if (true) "x" else "y"
+res105: String = x
+
+scala> if (5 > 6) "y" else "x"
+res106: String = x
+
+scala> val pulkstens = 23
+pulkstens: Int = 23
+
+scala> // if (pulkstens > 22) "ej gulēt" else "dzīvo"
+
+scala> // if (23 > 22) "ej gulēt" else "dzīvo"
+
+scala> // if (true) "ej gulēt" else "dzīvo"
+
+scala> // "ej gulēt"
+
+scala> if (pulkstens > 22) "ej gulēt" else "dzīvo"
+res107: String = ej gulēt
+

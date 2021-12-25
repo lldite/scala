@@ -1,0 +1,86 @@
+scala> if (true) "a" else "b"
+res0: String = a
+
+scala> // if (7 > 6 && 3 > 4) "a" else "b"
+
+scala> // if (true && false) "a" else "b"
+
+scala> // if (false) "a" else "b"
+
+scala> // "b"
+
+scala> if (7 > 6 && 3 > 4) "a" else "b"
+res1: String = b
+
+scala> 3 + 4
+res2: Int = 7
+
+scala>   def f(x: Int) = x + 1
+f: (x: Int)Int
+
+scala> f(false)
+<console>:13: error: type mismatch;
+ found   : Boolean(false)
+ required: Int
+       f(false)
+         ^
+
+scala> f(1)
+res4: Int = 2
+
+scala>   def kvadr(x: Int): Int = x * x
+kvadr: (x: Int)Int
+
+scala>   def kvadr(x: Int): Int = x * x
+x   xml
+
+scala>   def kvadr(x: Int): Int = x * x
+kvadr: (x: Int)Int
+
+scala> def ignorē(x: Int): String = "tadā"
+ignorē: (x: Int)String
+
+scala> ignorē(3)
+res5: String = tadā
+
+scala> kvadr(8)
+res6: Int = 64
+
+scala> kvadr(2)
+res7: Int = 4
+
+scala> kvadr(false)
+<console>:13: error: type mismatch;
+ found   : Boolean(false)
+ required: Int
+       kvadr(false)
+             ^
+
+scala> kvadr(-3)
+res9: Int = 9
+
+scala> def f(x: Int): Int = if (x>5) x*x else x+x
+f: (x: Int)Int
+
+scala> f(3)
+res10: Int = 6
+
+scala> f(6)
+res11: Int = 36
+
+scala>
+
+scala> def g(x:Int): Int = if (x>1 && x<10) x else 0
+g: (x: Int)Int
+
+scala> g(5)
+res12: Int = 5
+
+scala> g(88)
+res13: Int = 0
+
+scala> g(88000000)
+res14: Int = 0
+
+scala> g(-88000000)
+res15: Int = 0

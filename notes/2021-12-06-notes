@@ -1,0 +1,159 @@
+ld@t480> scala                                                                                                                        ~
+Welcome to Scala 2.13.5 (OpenJDK 64-Bit Server VM, Java 1.8.0_272).
+Type in expressions for evaluation. Or try :help.
+
+scala> 3
+val res0: Int = 3
+
+scala> 3: Double
+val res1: Double = 3.0
+
+scala> ' '
+val res2: Char =
+
+scala> List('x', ' ', 'x')
+val res3: List[Char] = List(x,  , x)
+
+scala> List('x', ' ', 'x').mkString
+val res4: String = x x
+
+scala> "   "
+val res5: String = "   "
+
+scala> ' '.toInt
+val res6: Int = 32
+
+scala> List(3: Int, 3)
+val res7: List[Int] = List(3, 3)
+
+scala> List(3)
+val res8: List[Int] = List(3)
+
+scala> 3: Int
+val res9: Int = 3
+
+scala> List(3: Int)
+val res10: List[Int] = List(3)
+
+scala> List((1, "es"), (2, "te"), (3, "biju")): List[(Int,String)]
+val res11: List[(Int, String)] = List((1,es), (2,te), (3,biju))
+
+scala> // List(((), ()), ((), ()), ((), ()), ((), ())): 
+
+scala> (1,2): Tuple2[Int, Int]
+val res12: (Int, Int) = (1,2)
+
+scala> ((1,2): Tuple2[Int, Int]): (Int, Int)
+val res13: (Int, Int) = (1,2)
+
+scala> List(1)
+val res14: List[Int] = List(1)
+
+scala> List(((), ()), ((), ()), ((), ()), ((), ())): List[Unit]
+val res15: List[Unit] = List((), (), (), ())
+
+scala> List(1,2)
+val res16: List[Int] = List(1, 2)
+
+scala> List(1,2,3)
+val res17: List[Int] = List(1, 2, 3)
+
+scala> (1,2)
+val res18: (Int, Int) = (1,2)
+
+scala> (1,2,3)
+val res19: (Int, Int, Int) = (1,2,3)
+
+scala> (1,2,3) //q qwkjefqwhjefqbfqbelo9;p0'-;ptgrju7p0
+val res20: (Int, Int, Int) = (1,2,3)
+
+scala> (1,2,3) //q qwkjefqwhjefqbfqbelo9;p0'-;ptgrju7p0';;;":"::L?:L?:L?":>?":":{|
+val res21: (Int, Int, Int) = (1,2,3)
+
+scala> // d, dt, d4, dd4d4der556h56h56h
+
+scala> // 3, ., d.
+
+scala> 5
+val res22: Int = 5
+
+scala> def x(x: Int) = x
+def x(x: Int): Int
+
+scala> :t (x _)
+Int => Int
+
+scala> :t 3
+Int
+
+scala> :t ((), ())
+(Unit, Unit)
+
+scala> :t (x _)
+Int => Int
+
+scala> 
+scala> List(5,5)
+val res23: List[Int] = List(5, 5)
+
+scala> def f(i:Int): List[Int] = List(i,i)
+def f(i: Int): List[Int]
+
+scala> f(3)
+val res24: List[Int] = List(3, 3)
+
+scala> // def g(i:Int): List[Int] = List(i,i)
+
+scala> List(1,1)++List(2,2)
+val res25: List[Int] = List(1, 1, 2, 2)
+
+scala> res25 ++List(0)
+val res26: List[Int] = List(1, 1, 2, 2, 0)
+
+scala> List(0)
+val res27: List[Int] = List(0)
+
+scala> List(0)++ res25
+val res28: List[Int] = List(0, 1, 1, 2, 2)
+
+scala> List(0)++res25++List(0)
+val res29: List[Int] = List(0, 1, 1, 2, 2, 0)
+
+scala> def g(i:Int, l:List[Int]): List[Int] = List(i)
+def g(i: Int, l: List[Int]): List[Int]
+
+scala> g(3, List(0))
+val res30: List[Int] = List(3)
+
+scala> def g(i:Int, l:List[Int]): List[Int] = List(i) ++ l
+def g(i: Int, l: List[Int]): List[Int]
+
+scala> g(3, List(0))
+val res31: List[Int] = List(3, 0)
+
+scala> def g(i:Int, l:List[Int]): List[Int] = List(i) ++ l 
+def g(i: Int, l: List[Int]): List[Int]
+
+scala> List(3)
+val res32: List[Int] = List(3)
+
+scala> List(3): Int
+           ^
+       error: type mismatch;
+        found   : List[Int]
+        required: Int
+
+scala> List[3]: Int
+           ^
+       error: missing argument list for method apply in trait IterableFactory
+       Unapplied methods are only converted to functions when a function type is expected.
+       You can make this conversion explicit by writing `apply _` or `apply(_)` instead of `apply`.
+
+scala> def g(i:Int, l:List[Int]): List[Int] = List(i, l)
+                                                      ^
+       error: type mismatch;
+        found   : List[Int]
+        required: Int
+
+scala> 
+

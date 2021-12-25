@@ -1,0 +1,44 @@
+// package one
+
+/*
+object One {
+  def f1(x: Int) = x + 1
+
+  def g1(x: Int, y: Int) = x + y
+
+  def f(x: Int): Int = if (x>5) x*x else x+x
+
+  def g(x:Int): Int = if (x>1 && x<10) x else 0
+
+  def kvadr(x: Int): Int = x * x
+
+  def main(args: Array[String]): Unit = {
+    println(s"f(3) = ${f(3)}");
+    println(3)
+    println(List())
+    println("s")
+  }
+}
+*/
+
+  def g(i: Int): Int = 3
+
+  def f(i: Int): Int = {
+    val j = i * i
+    j / 2
+  }
+
+  /* def mainx(args: Array[String]): Unit = {
+    3
+    3
+    (f(10))
+    val r = f(4)
+    println(f(4))
+    println("svejki")
+    3
+    3 + 4 + 5
+    ("q")
+    println(f(9))
+    println(f(5))
+  } */
+
