@@ -1,5 +1,5 @@
-object Main {
-  def main(args: Array[String]): Unit = {
+object Stavs {
+  def main(): Unit = {
     val h = 4
 
     //println(stavs(h, 1))
