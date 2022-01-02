@@ -1,0 +1,121 @@
+List(1,2,2,3,3,3)
+List.head
+List(1,2,2,3,3,3).head
+List(1,2,2,3,3,3).tail
+List(1,2,2,3,3,3).last
+List(1,2,2,3,3,3).sum
+List(1,2,2,3,3,3).map(x=>x+1)
+List(1,2,2,3,3,3).map(x=>(x+1)*2)
+List(4,5,6,7,8,9,10,11)
+8<9
+if(true)3 else 5
+if(false)3 else 5
+true: Boolean
+9: Boolean
+"true": Boolean
+// if (5<4) 3 else 5
+// if (false) 3 else 5
+// 5 > 4
+// if (5 > 4) 3 else 5
+// if (true) 3 else 5
+if (5 > 4) 3 else 5
+List(4,5,6,7,8,9,10,11)
+List(1,2,2,3,3,3).map(x=>x+1)
+List(4,5,6,7,8,9,10,11).map(x=>if(x=>8)x else -x)
+List(4,5,6,7,8,9,10,11).map(x=>if(8>=x)x else -x)
+List(4,5,6,7,8,9,10,11).map(x=>if(x/3==2)x else -x)
+List(1,2,3,4,5,6,7,8,9,10,11).map(x=>if(x/3==2)x else -x)
+List(1,2,3,4,5,6,7,8,9,10,11).map(x=>if(x/3==2)-x else x)
+List(1,2,3,4,5,6,7,8,9,10,11).map(x => if (x>5) x else (if (x<3) x else -x))
+(1 to 30).toList
+(1 to 30).toList.filter(x=>5>x)
+(1 to 30).toList.filter(x=>x<5)
+(1 to 30).toList.filter(x=>x%3==2)
+(1 to 30).toList.filter(x=>x==10)
+(1 to 30).toList.filter(x=>x!=10)
+(1 to 30).toList.filter
+(1 to 30).toList.filter(x=>x!=10).sum
+(1 to 30).toList.sum
+(1 to 30).toList.sum++List(1,2,55)
+(1 to 30).toList.sum+List(1,2,55).sum
+((1 to 30).toList++List(1,2,55)).sum
+List("stringa", "biksinjas", "atsūti")
+List("stringa", "biksinjas", "atsūti")
+List("stringa", "biksinjas", "atsūti").zipWithIndex
+List("stringa", "biksinjas", "atsūti").zipWithIndex: List[(String, Int)]
+List("stringa", "biksinjas", "atsūti")
+"atsūti"
+"d"
+"d","f"
+"d"
+"f"
+val a = "d"
+vals b = "f"
+val b = "f"
+a
+b
+a++b
+val s = "haha"
+s++"!"
+"..."++s
+"..."++s++"!"
+val f: String => String = (x: String) => x ++ "!"
+f("a")
+f(a)
+f(k)
+f("k")
+List("g","j","bebe")
+f(res54)
+res54.mkString
+f(res56)
+res54.map(f)
+(1 to 50)
+(1,50)
+(1 to 50).range
+(1 to 50).sum
+(1 to 50).product
+(1 to 50).reverse
+(1 to 50).reverse.toList
+(1 to 50).reverse.mkString
+(1 to 50).toList
+(1 to 50).toList.map(i => i.toString)
+(1 to 50).toList.map(i => i.toString).mkString()
+(1 to 50).toList.map(i => i.toString).mkString
+(1 to 50).toList.map(i => i.toString).mkString("")
+(1 to 50).toList.map(i => i.toString).mkString.map(c => c)
+(1 to 50).toList.map(i => i.toString).mkString.map(c => 'l')
+(1 to 50).toList.map(i => i.toString).mkString.toList
+(1 to 50).toList.map(i => i.toString).mkString.toList.map(c => c ++ "")
+(1 to 50).toList.map(i => i.toString).mkString.map(c => )
+(1 to 50).toList.map(i => i.toString).mkString
+(1 to 50).toList.mkString.map(c => c ++ "")
+(1 to 50).toList.mkString.map(c => c.toString ++ "")
+(1 to 50).toList.mkString
+(1 to 50).toList.mkString("")
+(1 to 50).toList.mkString("*")
+"l"++""
+9+0
+"l"++""
+(1 to 50).toList.mkString("*")
+(1 to 50).toList.mkString("")
+(1 to 50).toList.mkString(" ")
+(1 to 50).toList.mkString(", ")
+def s(x: String) = x++x
+s.andThen(s)
+s.andThen(s) _
+s.andThen(s)("L")
+s("%")
+//s(s("%"))
+def s(x: String): String = x++x
+s(s("%"))
+s(s(s("%")))
+s(s(s(s("%"))))
+s(s(s(s(s("%")))))
+s(s(s(s(s(s("%"))))))
+s(s(s(s(s(s(s("%")))))))
+s(s(s(s(s(s(s(s(s("%")))))))))
+s(s(s(s(s(s(s(s(s(s(s(s(s("%")))))))))))))
+println(s(s(s(s(s(s(s(s(s(s(s(s(s("%"))))))))))))))
+println(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s("%"))))))))))))))))))
+println(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s("%"))))))))))))))))))))))
+println(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s("%"))))))))))))))))))))))))))

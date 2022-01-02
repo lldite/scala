@@ -1,0 +1,139 @@
+ld@t480> scala                                                                                                ~/code/2021-11-14-pirmais
+Welcome to Scala 2.13.5 (OpenJDK 64-Bit Server VM, Java 1.8.0_272).
+Type in expressions for evaluation. Or try :help.
+
+scala> List(1,2,2,3,3,3,)
+                        ^
+       error: illegal start of simple expression
+
+scala> List(1,2,2,3,3,3)
+val res0: List[Int] = List(1, 2, 2, 3, 3, 3)
+
+scala> List.head
+            ^
+       error: value head is not a member of object List
+
+scala> List(1,2,2,3,3,3).head
+val res2: Int = 1
+
+scala> List(1,2,2,3,3,3).tail
+val res3: List[Int] = List(2, 2, 3, 3, 3)
+
+scala> List(1,2,2,3,3,3).last
+val res4: Int = 3
+
+scala> List(1,2,2,3,3,3).sum
+val res5: Int = 14
+
+scala> List(1,2,2,3,3,3).map(x=>x+1)
+val res6: List[Int] = List(2, 3, 3, 4, 4, 4)
+
+scala> List(1,2,2,3,3,3).map(x=>(x+1)*2)
+val res7: List[Int] = List(4, 6, 6, 8, 8, 8)
+
+scala> List(4,5,6,7,8,9,10,11)
+val res8: List[Int] = List(4, 5, 6, 7, 8, 9, 10, 11)
+
+scala> 8<9
+val res9: Boolean = true
+
+scala> if(true)3 else 5
+val res10: Int = 3
+
+scala> if(false)3 else 5
+val res11: Int = 5
+
+scala> true: Boolean
+val res12: Boolean = true
+
+scala> 9: Boolean
+       ^
+       error: type mismatch;
+        found   : Int(9)
+        required: Boolean
+
+scala> "true": Boolean
+       ^
+       error: type mismatch;
+        found   : String("true")
+        required: Boolean
+
+scala> // if (5<4) 3 else 5
+
+scala> // if (false) 3 else 5
+
+scala> // 5 > 4
+
+scala> // if (5 > 4) 3 else 5
+
+scala> // if (true) 3 else 5
+
+scala> if (5 > 4) 3 else 5
+val res15: Int = 3
+
+scala> List(4,5,6,7,8,9,10,11)
+val res16: List[Int] = List(4, 5, 6, 7, 8, 9, 10, 11)
+
+scala> List(1,2,2,3,3,3).map(x=>x+1)
+val res17: List[Int] = List(2, 3, 3, 4, 4, 4)
+
+scala> List(4,5,6,7,8,9,10,11).map(x=>if(x=>8)x else -x)
+                                         ^
+       error: missing parameter type
+
+scala> List(4,5,6,7,8,9,10,11).map(x=>if(8>=x)x else -x)
+val res19: List[Int] = List(4, 5, 6, 7, 8, -9, -10, -11)
+
+scala> List(4,5,6,7,8,9,10,11).map(x=>if(x/3==2)x else -x)
+val res20: List[Int] = List(-4, -5, 6, 7, 8, -9, -10, -11)
+
+scala> List(1,2,3,4,5,6,7,8,9,10,11).map(x=>if(x/3==2)x else -x)
+val res21: List[Int] = List(-1, -2, -3, -4, -5, 6, 7, 8, -9, -10, -11)
+
+scala> List(1,2,3,4,5,6,7,8,9,10,11).map(x=>if(x/3==2)-x else x)
+val res22: List[Int] = List(1, 2, 3, 4, 5, -6, -7, -8, 9, 10, 11)
+
+scala> List(1,2,3,4,5,6,7,8,9,10,11).map(x => if (x>5) x else (if (x<3) x else -x))
+val res23: List[Int] = List(1, 2, -3, -4, -5, 6, 7, 8, 9, 10, 11)
+
+scala> (1 to 30).toList
+val res24: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)
+
+scala> (1 to 30).toList.filter(x=>5>x)
+val res25: List[Int] = List(1, 2, 3, 4)
+
+scala> (1 to 30).toList.filter(x=>x<5)
+val res26: List[Int] = List(1, 2, 3, 4)
+
+scala> (1 to 30).toList.filter(x=>x%3==2)
+val res27: List[Int] = List(2, 5, 8, 11, 14, 17, 20, 23, 26, 29)
+
+scala> (1 to 30).toList.filter(x=>x==10)
+val res28: List[Int] = List(10)
+
+scala> (1 to 30).toList.filter(x=>x!=10)
+val res29: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)
+
+scala> (1 to 30).toList.filter
+                        ^
+       error: missing argument list for method filter in class List
+       Unapplied methods are only converted to functions when a function type is expected.
+       You can make this conversion explicit by writing `filter _` or `filter(_)` instead of `filter`.
+
+scala> (1 to 30).toList.filter(x=>x!=10).sum
+val res31: Int = 455
+
+scala> (1 to 30).toList.sum
+val res32: Int = 465
+
+scala> (1 to 30).toList.sum++List(1,2,55)
+                           ^
+       error: value ++ is not a member of Int
+
+scala> (1 to 30).toList.sum+List(1,2,55).sum
+val res34: Int = 523
+
+scala> ((1 to 30).toList++List(1,2,55)).sum
+val res35: Int = 523
+
+scala>
