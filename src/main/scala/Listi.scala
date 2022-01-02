@@ -7,8 +7,8 @@ object Listi {
 
     println((1,2,3,4,5).toString.reverse == ")5,4,3,2,1(")
 
-    println((1 to 20).toList.filter(x => x % 2 == 0).map(x => (x, x+1)))
+    println((1 to 20).toList.filter(x => x % 2 == 0).map(x => (x, x + 1)))
 
-    println((1 to 20).toList.filter(x => x % 2 == 0).map(x => List(x, x+1)).flatten)
+    println((1 to 20).toList.filter(x => x % 2 == 0).map(x => List(x, x + 1)).flatten)
   }
 }
