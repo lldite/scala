@@ -10,5 +10,8 @@ object Listi {
     println((1 to 20).toList.filter(x => x % 2 == 0).map(x => (x, x + 1)))
 
     println((1 to 20).toList.filter(x => x % 2 == 0).map(x => List(x, x + 1)).flatten)
+
+    println(List.fill(10)("vīrietis").mkString(" ♥ sieviete ♥ "))
+    // vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis ♥ sieviete ♥ vīrietis
   }
 }
