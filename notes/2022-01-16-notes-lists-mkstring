@@ -1,0 +1,233 @@
+scala> def f(x:Int):Int= x+2
+def f(x: Int): Int
+
+scala> f(2)
+val res0: Int = 4
+
+scala> f(3)
+val res1: Int = 5
+
+scala> def f(x:Int):Int= x*4
+def f(x: Int): Int
+
+scala> List(1,2,3).map(f)
+val res2: List[Int] = List(4, 8, 12)
+
+scala> List(1,2,3).map(x => x*4)
+val res3: List[Int] = List(4, 8, 12)
+
+scala> 1*4
+val res4: Int = 4
+
+scala> 2*4
+val res5: Int = 8
+
+scala> 3*4
+val res6: Int = 12
+
+scala> List.fill(7)("*")
+val res7: List[String] = List(*, *, *, *, *, *, *)
+
+scala> List.fill(7)("*")
+val res8: List[String] = List(*, *, *, *, *, *, *)
+
+scala> List.fill(7)("*").mkString
+val res9: String = *******
+
+scala> List.fill(7)("*").mkString("")
+val res10: String = *******
+
+scala> List.fill(7)("*").mkString("1")
+val res11: String = *1*1*1*1*1*1*
+
+scala> List.fill(7)("*").mkString
+val res12: String = *******
+
+scala> List(1,2,3).map(x => List.fill(x)("*"))
+val res13: List[List[String]] = List(List(*), List(*, *), List(*, *, *))
+
+scala> List(1,2,3).map(x => List.fill(x)("*").mkString)
+val res14: List[String] = List(*, **, ***)
+
+scala> List.fill(6)("*").mkString
+val res15: String = ******
+
+scala> List.fill(7)("*").mkString
+val res16: String = *******
+
+scala> List.fill(5)(())
+val res17: List[Unit] = List((), (), (), (), ())
+
+scala> List.fill(5)("x")
+val res18: List[String] = List(x, x, x, x, x)
+
+scala> List.fill(5)("*")
+val res19: List[String] = List(*, *, *, *, *)
+
+scala> List.fill(5)("*")
+val res20: List[String] = List(*, *, *, *, *)
+
+scala> List(1,2,3,4,5,6,7,8,9).map(x => List.fill(x)("*").mkString)
+val res21: List[String] = List(*, **, ***, ****, *****, ******, *******, ********, *********)
+
+scala> List(1 to 9 )
+val res22: List[scala.collection.immutable.Range.Inclusive] = List(Range 1 to 9)
+
+scala> List(1 to 9)
+val res23: List[scala.collection.immutable.Range.Inclusive] = List(Range 1 to 9)
+
+scala> (1 to 9).toList
+val res24: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+scala> (1 to 9)toList.map(x => List.fill(x)("*").mkString)
+                     ^
+       error: ';' expected but '.' found.
+
+scala> (1 to 9).toList.map(x => List.fill(x)("*").mkString)
+val res25: List[String] = List(*, **, ***, ****, *****, ******, *******, ********, *********)
+
+scala> (1 to 9).toList.map(x => List.fill(x)("*"))
+val res26: List[List[String]] = List(List(*), List(*, *), List(*, *, *), List(*, *, *, *), List(*, *, *, *, *), List(*, *, *, *, *, *), List(*, *, *, *, *, *, *), List(*, *, *, *, *, *, *, *), List(*, *, *, *, *, *, *, *, *))
+
+scala> (1 to 9).toList.map(x => List.fill(x)("*").mkString)
+val res27: List[String] = List(*, **, ***, ****, *****, ******, *******, ********, *********)
+
+scala> (1 to 5).toList
+val res28: List[Int] = List(1, 2, 3, 4, 5)
+
+scala> (1 to 5).toList.mkString("x")
+val res29: String = 1x2x3x4x5
+
+scala> (1 to 9).toList.map(x => List.fill(x)("*").mkString)
+val res30: List[String] = List(*, **, ***, ****, *****, ******, *******, ********, *********)
+
+scala> (1 to 9).toList.map(x => List.fill(x)("*").mkString).mkString("\n")
+val res31: String =
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+
+scala> List(2,1,3).map(x => List.fill(x)("*").mkString).mkString("\n")
+val res32: String =
+**
+*
+***
+
+scala> List.fill(6)(_)
+                    ^
+       error: missing parameter type for expanded function ((<x$1: error>) => List.fill(6)(x$1))
+
+scala> List.fill(6)("_")
+val res34: List[String] = List(_, _, _, _, _, _)
+
+scala> List.fill(6)("_")++List.fill(6)("*")
+val res35: List[String] = List(_, _, _, _, _, _, *, *, *, *, *, *)
+
+scala> List.fill(6)("_")++List.fill(6)("*").mkString
+val res36: List[Any] = List(_, _, _, _, _, _, *, *, *, *, *, *)
+
+scala> (List.fill(6)("_")++List.fill(6)("*")).mkString
+val res37: String = ______******
+
+scala> (1 to 3).toList.map(x => List.fill(x)("*").mkString).mkString("\n")
+val res38: String =
+*
+**
+***
+
+scala> List(1,2,3).map(x => List.fill(x)("*").mkString).mkString("\n")
+val res39: String =
+*
+**
+***
+
+scala> List(1,2,3).map(x => x).mkString("\n")
+val res40: String =
+1
+2
+3
+
+scala> List(1,2,3).map(x => x+1).mkString("\n")
+val res41: String =
+2
+3
+4
+
+scala> List(1,2,3).map(x => 8).mkString("\n")
+val res42: String =
+8
+8
+8
+
+scala> List(1,2,3).map(x => "*").mkString("\n")
+val res43: String =
+*
+*
+*
+
+scala>
+
+scala> List(1,2,3).map(x => List.fill(x)("*")).mkString("\n")
+val res44: String =
+List(*)
+List(*, *)
+List(*, *, *)
+
+scala> List(1,2,3).map(x => List.fill(x)("*").mkString).mkString("\n")
+val res45: String =
+*
+**
+***
+
+scala> (1 to 9).toList
+val res46: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+scala> (1 to 9).toList.map(x => List.fill(x)("_"))
+val res47: List[List[String]] = List(List(_), List(_, _), List(_, _, _), List(_, _, _, _), List(_, _, _, _, _), List(_, _, _, _, _, _), List(_, _, _, _, _, _, _), List(_, _, _, _, _, _, _, _), List(_, _, _, _, _, _, _, _, _))
+
+scala> (9).toList.map(x => List.fill(x)("_"))
+           ^
+       error: value toList is not a member of Int
+
+scala> List(9).map(x => List.fill(x)("_"))
+val res49: List[List[String]] = List(List(_, _, _, _, _, _, _, _, _))
+
+scala> List(9).map(x => List.fill(x)("_")).mkString
+val res50: String = List(_, _, _, _, _, _, _, _, _)
+
+scala> List(9).map(x => List.fill(x)("_")).mkString
+val res51: String = List(_, _, _, _, _, _, _, _, _)
+
+scala> List.fill(7)("_")
+val res52: List[String] = List(_, _, _, _, _, _, _)
+
+scala> List.fill(7)("_").mkString
+val res53: String = _______
+
+scala> List.fill(7)("_").mkString("||")
+val res54: String = _||_||_||_||_||_||_
+
+scala> (1 to 4).toList
+val res55: List[Int] = List(1, 2, 3, 4)
+
+scala> (1 to 4).toList.mkString("\n")
+val res56: String =
+1
+2
+3
+4
+
+scala> //(1 to 4).toList.map(x => List.fill(x)(mkString("\n")
+
+scala> (1 to 4).toList.map(x => List.fill(x)(x).mkString).mkString("\n")
+val res57: String =
+1
+22
+333
+4444
