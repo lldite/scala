@@ -1,3 +1,5 @@
+package lldite
+
 object Listi {
   def main(): Unit = {
     println("Listi")

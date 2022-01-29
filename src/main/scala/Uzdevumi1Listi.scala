@@ -1,4 +1,4 @@
-// package lldite
+package lldite
 
 object Uzdevumi1Listi {
   // (List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), List(1, 2, 4, 5, 7, 8, 10, 11))

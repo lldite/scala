@@ -1,4 +1,4 @@
-// package lldite
+package lldite
 
 import org.scalatest.wordspec._
 import org.scalatest.matchers.should.Matchers._
