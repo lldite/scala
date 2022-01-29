@@ -2,7 +2,8 @@ package lldite
 
 object Uzdevumi1Listi {
   // (List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), List(1, 2, 4, 5, 7, 8, 10, 11))
-  def filterNumbersDiv3(l: List[Int]): List[Int] = ???
+  def filterNumbersDivisibleBy3(l: List[Int]): List[Int] =
+    l.filter(x => x % 3 != 0)
 
   // (0, "zero, divisible by 3, divisible by 5"),
   // (-1, "negative"),

@@ -10,7 +10,7 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     List(
       (List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), List(1, 2, 4, 5, 7, 8, 10, 11)),
     ).foreach { case (from, to) =>
-      obj.filterNumbersDiv3(from) shouldBe to
+      obj.filterNumbersDivisibleBy3(from) shouldBe to
     }
   }
 
