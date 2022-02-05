@@ -15,33 +15,20 @@ object Uzdevumi1Listi {
   // (-3, "negative, divisible by 3"),
   // (5, "divisible by 5"),
   // (30, "divisible by 3, divisible by 5"),
-  def numberPatterns(x: Int): String =
-    if (x == 0) "zero, divisible by 3, divisible by 5"
-    else (
-      if (x % 3 == 0 && x % 5 == 0 && x < 0) "negative, divisible by 3, divisible by 5"
-      else (
-        if (x % 3 == 0 && x % 5 == 0) "divisible by 3, divisible by 5"
-        else (
-          if (x % 3 == 0 && x < 0) "negative, divisible by 3"
-          else (
-            if (x % 3 == 0) "divisible by 3"
-            else (
-              if (x % 5 == 0 && x < 0) "negative, divisible by 5"
-              else (
-                if (x % 5 == 0) "divisible by 5"
-                else (
-                  if (x == 1 && x < 0) "negative"
-                  else (
-                    if (x == 1) " "
-                    else (
-                      if (x < 0) "negative"
-                      else "else")))))))))
+  def numberPatterns(x: Int): String = {
+    val z: List[String] = if (x == 0) List("zero") else List()
+    val n: List[String] = if (x < 0) List("negative") else List()
+    val d3: List[String] = if (x % 3 == 0) List("divisible by 3") else List()
+    val d5: List[String] = if (x % 5 == 0) List("divisible by 5") else List()
+    (z ++ n ++ d3 ++ d5).mkString(", ")
+  }
 
   // (List(0), 0),
   // (List(1, 0, 1), 0),
   // (List(2, 2, 0), 0),
+  // (List(4, 3, 0, 2, 1), 1),
   // (List(-2, -1, 0), -2),
-  def getElementAtMaxIndex(list: List[Int]): Int = ???
+  def getElementAtMaxIndex(x: List[Int]): Int = x.apply(x.max)
 
   // (List(0, 0, 0), "..."),
   // (List(1, 1), "::"),

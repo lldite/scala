@@ -26,12 +26,13 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     List(
       (0, "zero, divisible by 3, divisible by 5"),
       (-1, "negative"),
+      (1, ""),
       (-3, "negative, divisible by 3"),
       (5, "divisible by 5"),
       (30, "divisible by 3, divisible by 5"),
       (-25, "negative, divisible by 5"),
     ).foreach { case (from, to) =>
-      obj.numberPatterns(from) shouldBe to
+      (from, obj.numberPatterns(from)) shouldBe (from, to)
     }
   }
 
@@ -41,6 +42,7 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       (List(1, 0, 1), 0),
       (List(2, 2, 0), 0),
       (List(-2, -1, 0), -2),
+      (List(4, 3, 0, 2, 1), 1),
       (List(3, 5, 1, -3, 2, 3), 3),
     ).foreach { case (from, to) =>
       obj.getElementAtMaxIndex(from) shouldBe to
