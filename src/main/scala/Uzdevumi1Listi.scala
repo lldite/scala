@@ -5,12 +5,37 @@ object Uzdevumi1Listi {
   def filterNumbersDivisibleBy3(l: List[Int]): List[Int] =
     l.filter(x => x % 3 != 0)
 
+  // (('a' to 'z').toList, List('c', 'f', 'i', 'l', 'o', 'r', 'u', 'x')),
+  def everyThirdLetter(l: List[Char]): List[Char] =
+    l.zipWithIndex.filter(x => x._2 % 3 == 2).map(x => x._1)
+
   // (0, "zero, divisible by 3, divisible by 5"),
+  // (1, ""),
   // (-1, "negative"),
   // (-3, "negative, divisible by 3"),
   // (5, "divisible by 5"),
   // (30, "divisible by 3, divisible by 5"),
-  def numberPatterns(i: Int): String = ???
+  def numberPatterns(x: Int): String =
+    if (x == 0) "zero, divisible by 3, divisible by 5"
+    else (
+      if (x % 3 == 0 && x % 5 == 0 && x < 0) "negative, divisible by 3, divisible by 5"
+      else (
+        if (x % 3 == 0 && x % 5 == 0) "divisible by 3, divisible by 5"
+        else (
+          if (x % 3 == 0 && x < 0) "negative, divisible by 3"
+          else (
+            if (x % 3 == 0) "divisible by 3"
+            else (
+              if (x % 5 == 0 && x < 0) "negative, divisible by 5"
+              else (
+                if (x % 5 == 0) "divisible by 5"
+                else (
+                  if (x == 1 && x < 0) "negative"
+                  else (
+                    if (x == 1) " "
+                    else (
+                      if (x < 0) "negative"
+                      else "else")))))))))
 
   // (List(0), 0),
   // (List(1, 0, 1), 0),

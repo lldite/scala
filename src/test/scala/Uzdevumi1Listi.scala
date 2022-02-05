@@ -14,13 +14,22 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     }
   }
 
-  "it should computer numberPatterns" in {
+  "it should compute every third letter" in {
+    List(
+      (('a' to 'z').toList, List('c', 'f', 'i', 'l', 'o', 'r', 'u', 'x')),
+    ).foreach { case (from, to) =>
+      obj.everyThirdLetter(from) shouldBe to
+    }
+  }
+
+  "it should compute numberPatterns" in {
     List(
       (0, "zero, divisible by 3, divisible by 5"),
       (-1, "negative"),
       (-3, "negative, divisible by 3"),
       (5, "divisible by 5"),
       (30, "divisible by 3, divisible by 5"),
+      (-25, "negative, divisible by 5"),
     ).foreach { case (from, to) =>
       obj.numberPatterns(from) shouldBe to
     }
