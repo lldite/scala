@@ -49,6 +49,27 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     }
   }
 
+  "it should compute diagonalsEqual" in {
+    List(
+      (((1, 0), (0, 1)), (true, true)),
+      (((2, 9), (9, 4)), (false, true)),
+    ).foreach { case (from, to) =>
+      obj.diagonalsEqual(from) shouldBe to
+    }
+  }
+
+  "it should compute sumOrProduct" in {
+    List(
+      ((1, 3, true), 4),
+      ((5, 5, false), 25),
+      ((6, 7, true), 13),
+      ((8, -8, true), 0),
+      ((8, -8, false), -64),
+    ).foreach { case (from, to) =>
+      (obj.sumOrProduct _).tupled(from) shouldBe to
+    }
+  }
+
   "it should fillPattern" in {
     List(
       (List(0, 0, 0), "..."),

@@ -30,6 +30,20 @@ object Uzdevumi1Listi {
   // (List(-2, -1, 0), -2),
   def getElementAtMaxIndex(x: List[Int]): Int = x.apply(x.max)
 
+  // (((1, 0), (0, 1)), (true, true)),
+  // (((2, 9), (9, 4)), (false, true)),
+  def diagonalsEqual(square: ((Int, Int), (Int, Int))): (Boolean, Boolean) =
+    (square._1._1 == square._2._2, square._1._2 == square._2._1)
+
+  // 1, 3, true -> 4
+  // 5, 5, false -> 25
+  // 6, 7, true -> 13
+  // 8, -8, true -> 0
+  // 8, -8, false -> -64
+  def sumOrProduct(pirmais: Int, otrais: Int, sum: Boolean): Int =
+    if (sum == true) pirmais + otrais else pirmais * otrais
+    // if (sum) pirmais + otrais else pirmais * otrais
+
   // (List(0, 0, 0), "..."),
   // (List(1, 1), "::"),
   // (List(9, 8, 7, 6, 5), "#%|:."),
