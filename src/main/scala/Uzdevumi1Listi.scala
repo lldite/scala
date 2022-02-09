@@ -15,7 +15,17 @@ object Uzdevumi1Listi {
   // (-3, "negative, divisible by 3"),
   // (5, "divisible by 5"),
   // (30, "divisible by 3, divisible by 5"),
+
   def numberPatterns(x: Int): String = {
+    val z = if (x == 0) List("zero") else List()
+    val n = if (x < 0) List ("negative") else List()
+    val d3 = if (x % 3 == 0) List ("divisible by 3") else List ()
+    val d5 = if (x % 5 == 0) List ("divisible by 5") else List ()
+
+    (z ++ n ++ d3 ++ d5).mkString(", ")
+  }
+
+  def numberPatterns2(x: Int): String = {
     val z: List[String] = if (x == 0) List("zero") else List()
     val n: List[String] = if (x < 0) List("negative") else List()
     val d3: List[String] = if (x % 3 == 0) List("divisible by 3") else List()
@@ -43,6 +53,17 @@ object Uzdevumi1Listi {
   def sumOrProduct(pirmais: Int, otrais: Int, sum: Boolean): Int =
     if (sum == true) pirmais + otrais else pirmais * otrais
     // if (sum) pirmais + otrais else pirmais * otrais
+
+  // 3, 4 -> 7
+  // 4, 6 -> 24
+  // 5, 2 -> 7
+  // 9, 1 -> 9
+  // 5, 6 -> 11
+  // -3, -3 -> 9
+  def productIfSumEvenOtherwiseSum(a: Int, b: Int): Int = {
+    val sum = a + b
+    if (sum % 2 == 0) a * b else sum
+  }
 
   // (List(0, 0, 0), "..."),
   // (List(1, 1), "::"),

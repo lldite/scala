@@ -32,7 +32,7 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       (30, "divisible by 3, divisible by 5"),
       (-25, "negative, divisible by 5"),
     ).foreach { case (from, to) =>
-      (from, obj.numberPatterns(from)) shouldBe (from, to)
+      (from, obj.numberPatterns(from)) shouldBe(from, to)
     }
   }
 
@@ -70,6 +70,20 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     }
   }
 
+  "it should compute productIfSumEvenOtherwiseSum" in {
+    List(
+      ((3, 4), 7),
+      ((4, 6), 24),
+      ((5, 2), 7),
+      ((9, 1), 9),
+      ((5, 6), 11),
+      ((-3, -3), 9),
+    ).foreach { case (from, to) =>
+      (from, (obj.productIfSumEvenOtherwiseSum _).tupled(from)) shouldBe ((from, to))
+    }
+  }
+
+  /*
   "it should fillPattern" in {
     List(
       (List(0, 0, 0), "..."),
@@ -81,4 +95,5 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       obj.fillPattern(from) shouldBe to
     }
   }
+  */
 }
