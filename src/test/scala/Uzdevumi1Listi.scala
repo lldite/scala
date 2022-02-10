@@ -83,6 +83,18 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
     }
   }
 
+  "it should compute sumPositiveReturnIfBiggerThanTwenty" in {
+    List(
+      (List(1, -5, -6, 9, 5, -2), false),
+      (List(-3, 3, -3, 3, -3, 3), false),
+      (List(-4, 2, 3, 7, -10, 10, 5), true),
+      (List(100, -200), true),
+    ).foreach { case example @ (from, to) =>
+      (from, obj.sumPositiveReturnIfBiggerThanTwenty(from)) shouldBe example
+    }
+
+  }
+
   /*
   "it should fillPattern" in {
     List(

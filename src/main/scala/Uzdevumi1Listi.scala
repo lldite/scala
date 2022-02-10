@@ -65,6 +65,15 @@ object Uzdevumi1Listi {
     if (sum % 2 == 0) a * b else sum
   }
 
+  // List(1, -5, -6, 9, 5, -2) -> false
+  // List(-3, 3, -3, 3, -3, 3) -> false
+  // List(-4, 2, 3, 7, -10, 10, 5) -> true
+  // List(100, -200) -> true
+  def sumPositiveReturnIfBiggerThanTwenty(list: List[Int]): Boolean = {
+  if (list.filter(x => x > 0).sum > 20) true else false
+  }
+
+
   // (List(0, 0, 0), "..."),
   // (List(1, 1), "::"),
   // (List(9, 8, 7, 6, 5), "#%|:."),
