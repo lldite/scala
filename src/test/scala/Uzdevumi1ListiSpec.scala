@@ -32,7 +32,7 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       (30, "divisible by 3, divisible by 5"),
       (-25, "negative, divisible by 5"),
     ).foreach { case (from, to) =>
-      (from, obj.numberPatterns(from)) shouldBe(from, to)
+      (from, obj.numberPatterns(from)) shouldBe (from, to)
     }
   }
 
@@ -107,5 +107,5 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       obj.fillPattern(from) shouldBe to
     }
   }
-  */
+   */
 }
