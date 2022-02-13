@@ -21,5 +21,6 @@ class Uzdevumi2ListiSpec extends AnyWordSpec {
   "uzdevums4" in {
     obj.uzdevums4(List(1, 2, 3)) shouldBe List(1, 2, 3, 2, 3, 4, 3, 4, 5)
     obj.uzdevums4(List(5, 6, 7)) shouldBe List(5, 6, 7, 6, 7, 8, 7, 8, 9)
+    obj.uzdevums4(List(8)) shouldBe List(8, 9, 10)
   }
 }
