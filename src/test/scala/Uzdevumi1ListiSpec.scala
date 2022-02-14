@@ -95,7 +95,12 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
 
   }
 
-  /*
+  "it should izravētElementus" in {
+    obj.izravētElementus(List('a', 'b', 'c', 'd', 'e')) shouldBe "ace"
+    obj.izravētElementus(List('h', 'o', 'e', 'x', 'h')) shouldBe "heh"
+    obj.izravētElementus(List(':', 'o', '-', 'x', ')', '-')) shouldBe ":-)"
+  }
+
   "it should fillPattern" in {
     List(
       (List(0, 0, 0), "..."),
@@ -107,5 +112,4 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       obj.fillPattern(from) shouldBe to
     }
   }
-   */
 }

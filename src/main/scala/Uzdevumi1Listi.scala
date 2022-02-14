@@ -69,15 +69,22 @@ object Uzdevumi1Listi {
   // List(-3, 3, -3, 3, -3, 3) -> false
   // List(-4, 2, 3, 7, -10, 10, 5) -> true
   // List(100, -200) -> true
+  // TODO: šeit vajag noņemt liekās figūriekavas
   def sumPositiveReturnIfBiggerThanTwenty(list: List[Int]): Boolean = {
   if (list.filter(x => x > 0).sum > 20) true else false
   }
 
+  // List('a', 'b', 'c', 'd', 'e') -> "ace"
+  // List('h', 'o', 'e', 'x', 'h') -> "heh"
+  // List(':', 'o', '-', 'x', ')', '-') -> ":-)"
+  def izravētElementus(burti: List[Char]): String = ???
+  // HINT: list.apply(3) = paņemt ceturto elementu no saraksta (trešo, ja skaita no 0)
+  // HINT: List[Char] savstarpēji konvertējas ar String caur .mkString/.toList
 
   // (List(0, 0, 0), "..."),
   // (List(1, 1), "::"),
-  // (List(9, 8, 7, 6, 5), "#%|:."),
   // (List(0, 1, 2, 3, 4, 5, 6, 7, 8), "#%|:."),
   // (List(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4), "...:::|||%%%###"),
+  // (List(9, 8, 7, 6, 5), "#%|:."),
   def fillPattern(list: List[Int]): String = ???
 }
