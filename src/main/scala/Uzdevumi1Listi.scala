@@ -70,21 +70,38 @@ object Uzdevumi1Listi {
   // List(-4, 2, 3, 7, -10, 10, 5) -> true
   // List(100, -200) -> true
   // TODO: šeit vajag noņemt liekās figūriekavas
-  def sumPositiveReturnIfBiggerThanTwenty(list: List[Int]): Boolean = {
+  def sumPositiveReturnIfBiggerThanTwenty(list: List[Int]): Boolean =
   if (list.filter(x => x > 0).sum > 20) true else false
-  }
+
 
   // List('a', 'b', 'c', 'd', 'e') -> "ace"
   // List('h', 'o', 'e', 'x', 'h') -> "heh"
   // List(':', 'o', '-', 'x', ')', '-') -> ":-)"
-  def izravētElementus(burti: List[Char]): String = ???
+  def izravētElementus(burti: List[Char]): String =
+    List(burti.apply(0), burti.apply(2), burti.apply(4)).mkString
+
+
+    //burti.zipWithIndex.filter(x => x._2 % 2 ==0).map(x => x._1).mkString
+
+  // List('a', 'b', 'c', 'd', 'e').zipWithIndex.filter(x => x._2 % 2 == 0).map(x => x._1).mkString
+  // String = ace
+
   // HINT: list.apply(3) = paņemt ceturto elementu no saraksta (trešo, ja skaita no 0)
   // HINT: List[Char] savstarpēji konvertējas ar String caur .mkString/.toList
 
-  // (List(0, 0, 0), "..."),
+  // 0 -> '.', 1 -> ':', 2 -> '|', 3 -> '%', 4 -> '#', 5 -> '.', 6 -> ':', ...
+  def getChar(j: Int): Char = {
+    val i = j % 5
+    //if (i == 0) '.' else if (i == 1) ':' else if (i == 2) '|' else if (i == 3) '%' else '#'
+    List('.', ':', '|', '%', '#').apply(i)
+  }
+
+  // (List(0, 0, 0) -> List('.', '.', '.') -> "..."),
   // (List(1, 1), "::"),
-  // (List(0, 1, 2, 3, 4, 5, 6, 7, 8), "#%|:."),
   // (List(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4), "...:::|||%%%###"),
+  // (List(-1, -1, -1, 0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7), "###...:::|||%%%###...:::|||"),
   // (List(9, 8, 7, 6, 5), "#%|:."),
-  def fillPattern(list: List[Int]): String = ???
+  // (List(295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305), ".:|%#.:|%#.")
+  // List(4, 5, 4, 6) -> "#.#:"
+  def fillPattern(list: List[Int]): String = list.map(i => getChar(i)).mkString
 }

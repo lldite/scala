@@ -14,7 +14,7 @@ object Uzdevumi2Listi {
   // List(List(1), List(2, 2), List(3, 3, 3))
 
   // List(1, 2, 3) -> List(1, 2, 2, 3, 3, 3)
-  def uzdevums3(list: List[Int]): List[Int] = list.map(x => List.fill(x)(x)).flatten
+  def uzdevums3(list: List[Int]): List[Int] = list.flatMap(x => List.fill(x)(x))
   // List(1,2,3).map( x=> List.fill(x)(x)).flatten
   // List(1, 2, 2, 3, 3, 3)
 
@@ -24,7 +24,7 @@ object Uzdevumi2Listi {
   // List(3, 5) -> List(3, 4, 5, 5, 6, 7)
   // List(200, 100) -> List(200, 201, 202, 100, 101, 102)
   def uzdevums4(list: List[Int]): List[Int] =
-    list.map(x => List(x, x + 1, x + 2)).flatten
+    list.flatMap(x => List(x, x + 1, x + 2))
 
-  // UZDEVUMS: refaktorēt list.map(...).flatten uz list.flatMap(...)
+  // TODO: refaktorēt list.map(...).flatten uz list.flatMap(...)
 }
