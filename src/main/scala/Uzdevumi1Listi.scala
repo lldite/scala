@@ -104,4 +104,16 @@ object Uzdevumi1Listi {
   // (List(295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305), ".:|%#.:|%#.")
   // List(4, 5, 4, 6) -> "#.#:"
   def fillPattern(list: List[Int]): String = list.map(i => getChar(i)).mkString
+
+  // List(9, 8, 7, 6, 5, 4, 3, 2, 1) -> List(7, 6, 5, 4)
+  // List(3, 4, 3, 4, 3, 4, 3) -> List(3, 4, 3, 4)
+  def getFromThirdToSixth(list: List[Int]): List[Int] =
+    List(2,3,4,5).map(x => list.apply(x))
+
+  // List(1, 2, 3, 4, 5) -> List(5, 4, 3, 2, 1)
+  // List(4, 8, 3, 6) -> List(6, 3, 8, 4)
+  def reverse(l: List[Int]): List[Int] = {
+    val t: Int = l.length
+    ((t - 1) to 0 by -1).toList.map(x => l.apply(x))
+  }
 }

@@ -112,4 +112,18 @@ class Uzdevumi1ListiSpec extends AnyWordSpec {
       obj.fillPattern(from) shouldBe to
     }
   }
+
+  "it should getFromThirdToSixth" in {
+    obj.getFromThirdToSixth(List(9, 8, 7, 6, 5, 4, 3, 2, 1)) shouldBe List(7, 6, 5, 4)
+    obj.getFromThirdToSixth(List(3, 4, 3, 4, 3, 4, 3)) shouldBe List(3, 4, 3, 4)
+  }
+
+  "it should reverse lists" in {
+    // Kāds ir apgriezts saraksts List(1,2,3,4,5)?
+    // Programma: List()
+    // Skolotāja atbildes lapiņā: List(5,4,3,2,1)
+    obj.reverse(List(1, 2, 3, 4, 5)) shouldBe List(5, 4, 3, 2, 1)
+    obj.reverse(List(4, 8, 3, 6)) shouldBe List(6, 3, 8, 4)
+    obj.reverse(List('x', 'p', 'z', 'f', 'n', 'y')) shouldBe List('y', 'n', 'f', 'z', 'p', 'x')
+  }
 }
