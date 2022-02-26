@@ -37,4 +37,11 @@ object Uzdevumi3Foldi {
   // List(1, 5, 2, 0, -1) -> 5
   def count(a: List[Int]): Int =
     a.foldLeft(0)((a, b) => a + 1)
+
+  // List() = 0
+  // List(3, 6, 5) = 6
+  // List(5, 3, 7, 1, 9) = 9
+  // List(7, 6, 5) = 7
+  // HINT: list.max izmantot nedrīkst
+  def max(a: List[Int]): Int = a.foldLeft(-70000)((b,c) => if (b > c) b else c)
 }
