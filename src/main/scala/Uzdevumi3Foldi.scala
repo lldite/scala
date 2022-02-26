@@ -44,4 +44,23 @@ object Uzdevumi3Foldi {
   // List(7, 6, 5) = 7
   // HINT: list.max izmantot nedrīkst
   def max(a: List[Int]): Int = a.foldLeft(-70000)((b,c) => if (b > c) b else c)
+
+  // List() = -100
+  // List(1) = 1
+  // List(-5) = -100
+  // List(-5, -7) = -100
+  // List(1, 0) = 1
+  // List(1, 1) = 1
+  // List(1, 2) = 1
+  // List(1, -7) = -7
+  // List(1, -7, -9) = -7
+  // List(1, -7, -5) = -7
+  // List(1, -7, 4) = 4
+  // List(1, -7, 4, 5) = 4
+  // List(1, -7, 4, -4) = -4
+  // List(1, -7, 4, -5) = -5
+  // List(1, -7, 4, -6) = -6
+  def flipflop(ns: List[Int]): Int =
+    ns.foldLeft(-100)((a,b) => if (a < 0 && b > 0 || a > 0 && b < 0) b else a)
+    // ns.foldLeft(-100)((a,b) => if (a > 0 != b > 0) b else a)
 }
