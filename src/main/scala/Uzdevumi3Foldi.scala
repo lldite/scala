@@ -43,7 +43,7 @@ object Uzdevumi3Foldi {
   // List(5, 3, 7, 1, 9) = 9
   // List(7, 6, 5) = 7
   // HINT: list.max izmantot nedrīkst
-  def max(a: List[Int]): Int = a.foldLeft(-70000)((b,c) => if (b > c) b else c)
+  def max(a: List[Int]): Int = a.foldLeft(-70000)((b, c) => if (b > c) b else c)
 
   // List() = -100
   // List(1) = 1
@@ -61,6 +61,14 @@ object Uzdevumi3Foldi {
   // List(1, -7, 4, -5) = -5
   // List(1, -7, 4, -6) = -6
   def flipflop(ns: List[Int]): Int =
-    ns.foldLeft(-100)((a,b) => if (a < 0 && b > 0 || a > 0 && b < 0) b else a)
-    // ns.foldLeft(-100)((a,b) => if (a > 0 != b > 0) b else a)
+    ns.foldLeft(-100)((a, b) => if (a < 0 && b > 0 || a > 0 && b < 0) b else a)
+  // ns.foldLeft(-100)((a,b) => if (a > 0 != b > 0) b else a)
+
+  // List() -> List()
+  // List(1, 2) -> List(2, 1)
+  // List(1, 2, 3) -> List(3, 2, 1)
+  // List(1, 2, 3, 4) -> List(4, 3, 2, 1)
+  // List(1, 2, 3, 4, 5) -> List(5, 4, 3, 2, 1)
+  // List(4, 8, 3, 6) -> List(6, 3, 8, 4)
+  def reverse(list: List[Int]): List[Int] = List()
 }
