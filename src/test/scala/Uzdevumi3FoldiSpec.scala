@@ -37,4 +37,10 @@ class Uzdevumi3FoldiSpec extends AnyWordSpec {
     obj.count(List(1, 2, 3)) shouldBe 3
     obj.count(List(6, 5, 4, 8, 7, 6)) shouldBe 6
   }
+
+  "reverse" in {
+    obj.reverse(List(1, 2, 3, 4, 5)) shouldBe List(5, 4, 3, 2, 1)
+    obj.reverse(List(4, 8, 3, 6)) shouldBe List(6, 3, 8, 4)
+    obj.reverse(List('x', 'p', 'z', 'f', 'n', 'y')) shouldBe List('y', 'n', 'f', 'z', 'p', 'x')
+  }
 }
