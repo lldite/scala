@@ -12,8 +12,11 @@ object Uzdevumi3Foldi {
   // List() -> 1
   // List(1, 2, 3) -> 24
   // List(4, 9, 6) -> 350
-  def multiplyWithPlusOne(ns: List[Int]): Int =
-    ns.foldLeft(1)((a, b) => a * (b + 1))
+  def multiplyWithPlusOne(ns: List[Int]): Int = {
+    val zip: (Int, Int) => Int = (a, b) => a * (b + 1)
+    ns.foldLeft[Int](1)(zip)
+  }
+  // ns.foldLeft(1)((a, b) => a * (b + 1))
 
   // 123, List() -> 0
   // 749, List(107) -> 7
@@ -70,5 +73,22 @@ object Uzdevumi3Foldi {
   // List(1, 2, 3, 4) -> List(4, 3, 2, 1)
   // List(1, 2, 3, 4, 5) -> List(5, 4, 3, 2, 1)
   // List(4, 8, 3, 6) -> List(6, 3, 8, 4)
-  def reverse(list: List[Int]): List[Int] = List()
+  def reverse(list: List[Int]): List[Int] = {
+    val zipper: (List[Int], Int) => List[Int] = (l, i) => List(i) ++ l
+    list.foldLeft(List[Int]())(zipper)
+  }
+
+  // List() -> (List(), List())
+  // List(1) -> (List(1), List())
+  // List(-3, 1) -> (List(1), List(-3))
+  // List(-3, 1, -6) -> (List(1), List(-3, -6))
+  // List(-3, 1, -6, 0) -> (List(1, 0), List(-3, -6))
+  // List(-3, 1, -6, 0, -1) -> (List(1, 0), List(-3, -6, -1))
+  // List(-3, 1, -6, 0, -1, 5) -> (List(1, 0, 5), List(-3, -6, -1))
+  // TODO: draw computation tree for third example
+  def partition(ns: List[Int]): (List[Int], List[Int]) =
+    ns.foldLeft[(List[Int], List[Int])]((List(), List()))((a, b) =>
+      if (b >= 0) (a._1 ++ List(b), a._2) else (a._1, a._2 ++ List(b))
+    )
+  // ns.foldLeft[(List[Int], List[Int])]((List(),List()))((a,b) => ???)
 }

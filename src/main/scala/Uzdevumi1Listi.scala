@@ -80,8 +80,7 @@ object Uzdevumi1Listi {
   def izravētElementus(burti: List[Char]): String =
     List(burti.apply(0), burti.apply(2), burti.apply(4)).mkString
 
-
-    //burti.zipWithIndex.filter(x => x._2 % 2 ==0).map(x => x._1).mkString
+      //burti.zipWithIndex.filter(x => x._2 % 2 ==0).map(x => x._1).mkString
 
   // List('a', 'b', 'c', 'd', 'e').zipWithIndex.filter(x => x._2 % 2 == 0).map(x => x._1).mkString
   // String = ace
@@ -107,8 +106,10 @@ object Uzdevumi1Listi {
 
   // List(9, 8, 7, 6, 5, 4, 3, 2, 1) -> List(7, 6, 5, 4)
   // List(3, 4, 3, 4, 3, 4, 3) -> List(3, 4, 3, 4)
-  def getFromThirdToSixth(list: List[Int]): List[Int] =
+  def getFromThirdToSixth(list: List[Int]): List[Int] = {
     List(2,3,4,5).map(x => list.apply(x))
+    // List(9, 8, 7, 6, 5, 4, 3, 2, 1).zipWithIndex.filter(x => x._2 == 2 || x._2 == 3 || x._2 == 4 || x._2 == 5)List[Int] = List(7, 6, 5, 4)
+  }
 
   // List(1, 2, 3, 4, 5) -> List(5, 4, 3, 2, 1)
   // List(4, 8, 3, 6) -> List(6, 3, 8, 4)
