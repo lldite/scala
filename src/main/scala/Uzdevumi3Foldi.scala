@@ -18,7 +18,7 @@ object Uzdevumi3Foldi {
   }
   // ns.foldLeft(1)((a, b) => a * (b + 1))
 
-  // 123, List() -> 0
+  // 123, List() -> 123
   // 749, List(107) -> 7
   // 210, List(5, 7, 2) -> 3
   // 420, List(3, 5, 7) -> 4
