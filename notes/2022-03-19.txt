@@ -1,0 +1,11 @@
+scala> l
+val res39: List[Int] = List(-4, 6, -2, -5, -8, 8, 5, -4, -5, 1)
+
+scala> l.filter(x => x > 0).map(x => 1).sum
+val res40: Int = 4
+
+scala> l.filter(x => x > 0).length
+val res41: Int = 4
+
+scala> l.foldLeft(0)((a,b) => a + (if(b > 0) 1 else 0))
+val res42: Int = 4

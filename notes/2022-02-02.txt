@@ -1,0 +1,57 @@
+def numberPatterns(x: Int): String =
+  /*{
+    val d3 = if (i % 3 == 0) List("divisible by 3") else List(): List[String]
+    val d5 = if (i % 5 == 0) List("divisible by 5") else List(): List[String]
+    (d3 ++ d5).mkString(", ")
+  }*/
+    if (x == 0) "zero, divisible by 3, divisible by 5"
+    else (
+      if (x % 3 == 0 && x % 5 == 0 && x < 0) "negative, divisible by 3, divisible by 5"
+      else (
+        if (x % 3 == 0 && x % 5 == 0) "divisible by 3, divisible by 5"
+        else (
+          if (x % 3 == 0 && x < 0) "negative, divisible by 3"
+          else (
+            if (x % 3 == 0) "divisible by 3"
+            else (
+              if (x % 5 == 0 && x < 0) "negative, divisible by 5"
+              else (
+                if (x % 5 == 0) "divisible by 5"
+                else (
+                  if (x == 1 && x < 0) "negative"
+                  else (
+                    if (x == 1) " "
+                    else (
+                      if (x < 0) "negative"
+                      else "else")))))))))
+
+  def numberPatterns(x: Int): String = {
+    val z: List[String] = if (x == 0) List("zero") else List()
+    val n: List[String] = if (x < 0) List("negative") else List()
+    val d3: List[String] = if (x % 3 == 0) List("divisible by 3") else List()
+    val d5: List[String] = if (x % 5 == 0) List("divisible by 5") else List()
+    (z ++ n ++ d3 ++ d5).mkString(", ")
+  }
+
+  numberPatterns(-10)
+
+  {
+    val z: List[String] = if (-10 == 0) List("zero") else List()
+    val z: List[String] = if (false) List("zero") else List()
+    val z: List[String] = List()
+    val n: List[String] = if (-10 < 0) List("negative") else List()
+    val n: List[String] = if (true) List("negative") else List()
+    val n: List[String] = List("negative")
+    val d3: List[String] = if (-10 % 3 == 0) List("divisible by 3") else List()
+    val d3: List[String] = if (false) List("divisible by 3") else List()
+    val d3: List[String] = List()
+    val d5: List[String] = if (-10 % 5 == 0) List("divisible by 5") else List()
+    val d5: List[String] = if (true) List("divisible by 5") else List()
+    val d5: List[String] = List("divisible by 5")
+
+    (z ++ n ++ d3 ++ d5).mkString(", ")
+    (List() ++ List("negative") ++ List() ++ List("divisible by 5")).mkString(", ")
+    List("negative", "divisible by 5").mkString("," ++ " ")
+    List("negative", "divisible by 5").mkString(", ")
+    "negative, divisible by 5"
+  }
